@@ -4,7 +4,7 @@ import {
   Row,
   Col,
 } from "reactstrap";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
 
@@ -13,7 +13,6 @@ import Separator from "../Separator/Separator";
 /* ----- Styling ----- */
 
 const Image = styled.img`
-
   height: auto;
   width: auto;
   max-height: 300px;

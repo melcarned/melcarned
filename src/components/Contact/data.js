@@ -8,7 +8,7 @@ export default {
   },
   footer: {
     buttonText: "Download Resume",
-    subtitle: "Let's work together",
+    subtitle: "- Let's work together -",
     copyright: "melcarned.com"
   }
 };

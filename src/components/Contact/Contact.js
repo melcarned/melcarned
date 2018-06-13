@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Button } from "reactstrap";
 import { Icon } from "react-icons-kit";
-import { linkedin } from "react-icons-kit/entypo/";
+import { linkedin, code, text } from "react-icons-kit/entypo/";
 import styled, { keyframes } from "styled-components";
 import Zoom from "react-reveal/Zoom";
 import Flash from "react-reveal/Flash";
@@ -32,13 +32,6 @@ const SubSection = styled.div`
   margin: 100px 0;
 `;
 
-const Subtitle = styled.h6`
-  font-family: "Roboto Mono", monospace;
-  margin-bottom: 10px;
-  display: block;
-  text-align: center;
-`;
-
 const HandshakeIcon = styled.img`
   display: block;
   margin: 0 auto;
@@ -57,19 +50,10 @@ const Contact = () => {
         <ContactInfo
           image={info.image}
           header={info.header}
+          subtitle={footer.subtitle}
           link={info.link}
           email={info.email}
         />
-        <Subtitle>{footer.subtitle}</Subtitle>
-        {/*<SubSection>
-          <Flash>
-            <a href={require("../../assets/Damiano_Melcarne_Resume.pdf")}>
-        <DownloadResume>{footer.buttonText}</DownloadResume>
-  </a>
-            
-            <HandshakeIcon src={require("../../assets/handshake.svg")} />
-          </Flash>
-        </SubSection>*/}
       </Wrapper>
       <Footer
         buttonText={footer.buttonText}

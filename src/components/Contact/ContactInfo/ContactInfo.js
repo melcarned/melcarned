@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, UncontrolledTooltip } from "reactstrap";
 import { Icon } from "react-icons-kit";
-import { linkedin } from "react-icons-kit/entypo/";
+import { linkedin, code, documentInverted } from "react-icons-kit/entypo/";
 import styled, { keyframes } from "styled-components";
 import Zoom from "react-reveal/Zoom";
 
@@ -25,8 +25,7 @@ const Wrapper = styled.div`
 `;
 
 const ContactSection = styled.div`
-  display: inline-block;
-  vertical-align: bottom;
+
 `;
 
 const CenterItems = styled.div`
@@ -37,36 +36,51 @@ const CenterItems = styled.div`
   transform: perspective(1px) translateY(-50%);
 `;
 
+const NYCIcon = styled.img`
+  margin-bottom: 2rem;
+  height: auto;
+  width: auto;
+  max-height: 300px;
+  @media (max-width: 768px) {
+    margin: 2rem auto;
+  }
+`;
+
 const Title = styled.h3`
   font-weight: bold;
-  margin-bottom: 2rem;
   font-family: "Roboto Mono", monospace;
 `;
 
-const NYCIcon = styled.img`
-  width: 30%;
-  margin-bottom: 2rem;
+const Subtitle = styled.h6`
+  font-family: "Roboto Mono", monospace;
+  margin-top: 0.8rem;
+  display: block;
+  text-align: center;
 `;
 
 const LinkedInIcon = styled.a`
   border-radius: 5px;
   padding: 0.5rem 1rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
+  line-height: 0;
   display: inline-block;
   vertical-align: middle;
   color: #fff;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
-  border: 2px #fff solid;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  transition: all 0.1s;
+
 
   &:hover {
-    -webkit-animation: ${Highlight} 1.5s ease-in-out infinite alternate
-    -moz-animation: ${Highlight} 1.5s ease-in-out infinite alternate
-    animation: ${Highlight} 1.5s ease-in-out infinite alternate
+    -webkit-animation: ${Highlight} 0.5s ease-in-out infinite alternate
+    -moz-animation: ${Highlight} 0.5s ease-in-out infinite alternate
+    animation: ${Highlight} 0.5s ease-in-out infinite alternate
     cursor: pointer;
-    color: #444;
-    border: 2px #444 solid;
+    color: #343a40;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0.5rem;
   }
 `;
 
@@ -74,6 +88,10 @@ const Spacer = styled.p`
   font-size: 4rem;
   display: inline-block;
   vertical-align: middle;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Email = styled.h2`
@@ -82,23 +100,59 @@ const Email = styled.h2`
   margin-left: 1rem;
   padding: 20px;
   color: inherit;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0.5rem 0 0 0;
+  }
 `;
 
-const ContactInfo = ({ header, link, email }) => {
+const HandshakeIcon = styled.img`
+  display: block;
+  margin: 0 auto;
+  width: 2rem;
+  margin-bottom: 4rem;
+`;
+
+const ContactInfo = ({ header, subtitle, link, email }) => {
   return (
     <React.Fragment>
       <CenterItems>
         <Container>
           <Zoom>
-            <NYCIcon src={require('../../../assets/empire_state_building.svg')} />
+            <NYCIcon
+              src={require("../../../assets/empire_state_building.svg")}
+            />
             <Title>{header}</Title>
+            <Subtitle>{subtitle}</Subtitle>
+            <HandshakeIcon src={require("../../../assets/handshake.svg")} />
+            <Row>
+              <Col lg={12}>
             <ContactSection>
-              <LinkedInIcon href={link}>
+              <LinkedInIcon id="linkedIn" href={link}>
                 <Icon size={36} icon={linkedin} />
               </LinkedInIcon>
+              <UncontrolledTooltip placement="top" target="linkedIn">
+                Linkedin
+              </UncontrolledTooltip>
+              <LinkedInIcon id="resume" href={link}>
+                <Icon size={36} icon={documentInverted} />
+              </LinkedInIcon>
+              <UncontrolledTooltip placement="top" target="resume">
+                Resume
+              </UncontrolledTooltip>
+              <LinkedInIcon id="code" href={link}>
+                <Icon size={36} icon={code} />
+              </LinkedInIcon>
+              <UncontrolledTooltip placement="top" target="code">
+                Source
+              </UncontrolledTooltip>
               <Spacer> | </Spacer>
               <Email>{email}</Email>
             </ContactSection>
+            </Col>
+            </Row>
           </Zoom>
         </Container>
       </CenterItems>

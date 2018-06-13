@@ -14,17 +14,8 @@ const Page = styled.div`
   z-index: -1;
 `;
 
-const eSection = styled.section`
-  background-image: linear-gradient(
-    rgba(100, 100, 100, 0.15) 0.05em,
-    transparent 0.05em
-  ),
-  linear-gradient(90deg, rgba(100, 100, 100, 0.15) 0.05em, transparent 0.05em);
-  background-size: 3em 3em;
-  background-color: #343a40;
-`;
-
 class App extends Component {
+
   /* Scroll to section based on ref tag */
   scrollToSection = c => {
     scrollToComponent(c, {
@@ -48,13 +39,13 @@ class App extends Component {
         </section>
 
         {/* <!--- Expertises ---> */}
-        <eSection
+        <section
           ref={s => {
             this.expertises = s;
           }}
         >
           <Expertises />
-        </eSection>
+        </section>
 
         {/* <!--- Contact ---> */}
         <section
