@@ -1,6 +1,5 @@
-import Landing from "./Landing";
-import Services from "./Services";
-import Experience from "./Experience";
-import Contact from "./Contact";
+import Landing from "../components/Landing/Landing";
+import Expertises from "../components/Expertises/Expertises";
+import Contact from "../components/Contact/Contact";
 
-export { Landing, Services, Experience, Contact };
+export { Landing, Expertises, Contact };
