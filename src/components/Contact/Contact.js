@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Button } from "reactstrap";
 import { Icon } from "react-icons-kit";
-import { linkedin, code, text } from "react-icons-kit/entypo/";
+import { linkedin } from "react-icons-kit/entypo/";
 import styled, { keyframes } from "styled-components";
 import Zoom from "react-reveal/Zoom";
 import Flash from "react-reveal/Flash";
@@ -42,7 +42,7 @@ const HandshakeIcon = styled.img`
 /* ----- Contact ---- */
 
 const Contact = () => {
-  const { info, footer } = data;
+  const { info, footer, icons } = data;
 
   return (
     <React.Fragment>
@@ -51,14 +51,11 @@ const Contact = () => {
           image={info.image}
           header={info.header}
           subtitle={footer.subtitle}
-          link={info.link}
           email={info.email}
+          icons={icons}
         />
       </Wrapper>
       <Footer
-        buttonText={footer.buttonText}
-        subtitle={footer.subtitle}
-        icon={footer.icon}
         copyright={footer.copyright}
       />
     </React.Fragment>
