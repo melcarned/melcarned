@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled, { keyframes } from "styled-components";
 import Bounce from "react-reveal/Bounce";
 
@@ -55,8 +55,8 @@ const LogoText = styled.h1`
     font-size: 5rem;
   }
 
-  @media (max-width: 320px) {
-    font-size: 3rem;
+  @media (max-width: 576px) {
+    font-size: 2.5rem;
   }
 `;
 

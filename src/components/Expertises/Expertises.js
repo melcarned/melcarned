@@ -33,7 +33,7 @@ const Expertises = () => {
     <React.Fragment>
       {data.expertise.map((e, i) => {
         return (
-          <Wrapper even={i % 2 == 0}>
+          <Wrapper even={i % 2 === 0}>
             <Container>
               <Expertise
                 key={i}
@@ -44,7 +44,7 @@ const Expertises = () => {
                 skills={e.skills}
               />
             </Container>
-            {i % 2 == 1 ? <Separator /> : null}
+            {i % 2 === 1 ? <Separator /> : null}
           </Wrapper>
         );
       })}

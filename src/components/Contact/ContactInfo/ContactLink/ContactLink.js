@@ -28,11 +28,10 @@ const IconLink = styled.a`
   -moz-transition: all 0.1s;
   transition: all 0.1s;
 
-
   &:hover {
-    -webkit-animation: ${Highlight} 0.5s ease-in-out infinite alternate;
-    -moz-animation: ${Highlight} 0.5s ease-in-out infinite alternate;
-    animation: ${Highlight} 0.5s ease-in-out infinite alternate;
+    -webkit-animation: ${Highlight} 0.1s ease-in-out infinite alternate;
+    -moz-animation: ${Highlight} 0.1s ease-in-out infinite alternate;
+    animation: ${Highlight} 0.1s ease-in-out infinite alternate;
     cursor: pointer;
     color: #343a40;
   }

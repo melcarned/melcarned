@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import styled, { keyframes } from "styled-components";
+import React from "react";
+import styled from "styled-components";
 import Typing, { Cursor } from "react-typing-animation";
 import Fade from "react-reveal/Fade";
 
