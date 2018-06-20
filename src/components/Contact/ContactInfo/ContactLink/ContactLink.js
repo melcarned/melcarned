@@ -18,20 +18,19 @@ const Highlight = keyframes`
 
 const IconLink = styled.a`
   border-radius: 5px;
-  padding: 0.5rem 1rem;
-  margin-right: 1rem;
+  padding: 2rem;
   line-height: 0;
   display: inline-block;
   vertical-align: middle;
-  color: ${(props) => props.theme.secondaryColor};
+  color: ${(props) => props.theme.primaryColor};
   -webkit-transition: all 0.1s;
   -moz-transition: all 0.1s;
   transition: all 0.1s;
 
   &:hover {
-    -webkit-animation: ${Highlight} 0.1s ease-in-out infinite alternate;
-    -moz-animation: ${Highlight} 0.1s ease-in-out infinite alternate;
-    animation: ${Highlight} 0.1s ease-in-out infinite alternate;
+    // -webkit-animation: ${Highlight} 0.1s ease-in-out infinite alternate;
+    // -moz-animation: ${Highlight} 0.1s ease-in-out infinite alternate;
+    // animation: ${Highlight} 0.1s ease-in-out infinite alternate;
     cursor: pointer;
     color: ${(props) => props.theme.primaryColor};
   }
@@ -48,7 +47,7 @@ const ContactLink = ({ icon, target, link }) => {
         <Icon size={36} icon={icon} />
       </IconLink>
       <UncontrolledTooltip placement="top" target={target}>
-        {target}
+        {target === "Email" ? "melcarned@gmail.com" : target}
       </UncontrolledTooltip>
     </React.Fragment>
   );

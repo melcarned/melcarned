@@ -29,7 +29,7 @@ class App extends Component {
   };
 
   render() {
-    const { approachContent, toolkitContent, footer } = data;
+    const { approachContent, toolkitContent, contact, footer } = data;
     return (
       <ThemeProvider theme={theme}>
         <MasterWrapper>
@@ -67,7 +67,7 @@ class App extends Component {
               this.contact = c;
             }}
           >
-            <Contact />
+            <Contact content={contact} />
           </section>
           <Footer copyright={footer.copyright} />
         </MasterWrapper>

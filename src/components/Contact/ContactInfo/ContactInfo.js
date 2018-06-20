@@ -8,6 +8,8 @@ import ContactLink from "./ContactLink/ContactLink";
 /* ----- Styles ----- */
 
 const ContainerStyled = styled(Container)`
+  text-align: center;
+  padding: 3rem 0;
   border-top: 1px dashed ${(props) => props.theme.borderColor};
 `;
 
@@ -62,7 +64,7 @@ const Email = styled.h2`
 const HandshakeIcon = styled.img`
   display: block;
   margin: 0 auto;
-  width: 2rem;
+  width: 4rem;
   margin-bottom: 4rem;
 `;
 
@@ -72,14 +74,14 @@ const ContactInfo = ({ header, subtitle, link, email, icons }) => {
           <NYCIcon src={require("../../../assets/empire_state_building.svg")} />
           <Title>{header}</Title>
           <Subtitle>{subtitle}</Subtitle>
-          <HandshakeIcon src={require("../../../assets/handshake.svg")} />
+          {/* <HandshakeIcon src={require("../../../assets/handshake.svg")} /> */}
           <Row>
             <Col lg={12}>
               {icons.map((e, i) => (
                 <ContactLink key={i} icon={e.icon} target={e.target} link={e.link} />
               ))}
-              <Spacer> | </Spacer>
-              <Email>{email}</Email>
+              {/* <Spacer> | </Spacer>
+              <Email>{email}</Email> */}
             </Col>
           </Row>
       </ContainerStyled>

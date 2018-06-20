@@ -1,6 +1,7 @@
 /* ----- data ------ */
 
 import { compass, pencil, tree, users } from 'react-icons-kit/icomoon/';
+import { linkedin, code, documentInverted, mail } from "react-icons-kit/entypo/";
 
 const toolkitPath = "./assets/toolkit_icons/";
 
@@ -75,6 +76,36 @@ export default {
       },
     ]
   },
+contact: {
+  info: {
+    header: "Located in the East Village, NYC",
+    email: "melcarned@gmail.com",
+    subtitle: "- Let's work together -"
+  },
+  icons: [
+    {
+      icon: linkedin,
+      target: "LinkedIn",
+      link: "https://www.linkedin.com/in/melcarned/"
+    },
+    {
+      icon: documentInverted,
+      target: "Resume",
+      link: require("./assets/Damiano_Melcarne_Resume.pdf")
+    },
+    {
+      icon: code,
+      target: "Source",
+      link: "https://github.com/melcarned/melcarned"
+    },
+    {
+      icon: mail,
+      target: "Email",
+      link: "mailto:melcarned@gmail.com"
+    }
+  ],
+},
+
   footer: {
     copyright: "melcarned.com"
   }
