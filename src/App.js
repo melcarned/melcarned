@@ -1,16 +1,12 @@
 import React, { Component } from "react";
-import { Landing, Expertises, Contact } from "./containers/index";
+import { Landing, Section, Contact, Footer } from "./containers/index";
 import styled from "styled-components";
 import scrollToComponent from "react-scroll-to-component";
+import data from './data';
 
 /* Base background for entire site */
-const Page = styled.div`
-  background-image: linear-gradient(
-      rgba(100, 100, 100, 0.15) 0.05em,
-      transparent 0.05em
-    ),
-    linear-gradient(90deg, rgba(100, 100, 100, 0.15) 0.05em, transparent 0.05em);
-  background-size: 3em 3em;
+const MasterWrapper = styled.div`
+  background-color: #fff;
   z-index: -1;
 `;
 
@@ -27,8 +23,9 @@ class App extends Component {
   };
 
   render() {
+    const { approachContent, toolkitContent, footer } = data;
     return (
-      <Page>
+      <MasterWrapper>
         {/* <!--- Landing ---> */}
         <section
           ref={l => {
@@ -38,13 +35,22 @@ class App extends Component {
           <Landing scrollToExpertises={() => this.scrollToSection(this.expertises)} />
         </section>
 
-        {/* <!--- Expertises ---> */}
+        {/* <!--- Approach ---> */}
         <section
           ref={s => {
             this.expertises = s;
           }}
         >
-          <Expertises />
+          <Section type="approach" content={approachContent}/>
+        </section>
+
+        {/* <!--- Toolkit ---> */}
+        <section
+          ref={s => {
+            this.expertises = s;
+          }}
+        >
+          <Section type="toolkit" content={toolkitContent}/>
         </section>
 
         {/* <!--- Contact ---> */}
@@ -55,7 +61,8 @@ class App extends Component {
         >
           <Contact />
         </section>
-      </Page>
+        <Footer copyright={footer.copyright}/>
+      </MasterWrapper>
     );
   }
 }

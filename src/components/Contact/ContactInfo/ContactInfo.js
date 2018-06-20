@@ -7,7 +7,8 @@ import ContactLink from "./ContactLink/ContactLink";
 
 /* ----- Styles ----- */
 
-const CenterItems = styled.div`
+const Wrapper = styled.div`
+  color: #000;
   text-align: center;
   padding-bottom: 4rem;
   position: relative;
@@ -72,9 +73,8 @@ const HandshakeIcon = styled.img`
 
 const ContactInfo = ({ header, subtitle, link, email, icons }) => {
   return (
-    <CenterItems>
+    <Wrapper>
       <Container>
-        <Zoom>
           <NYCIcon src={require("../../../assets/empire_state_building.svg")} />
           <Title>{header}</Title>
           <Subtitle>{subtitle}</Subtitle>
@@ -88,9 +88,8 @@ const ContactInfo = ({ header, subtitle, link, email, icons }) => {
               <Email>{email}</Email>
             </Col>
           </Row>
-        </Zoom>
       </Container>
-    </CenterItems>
+    </Wrapper>
   );
 };
 

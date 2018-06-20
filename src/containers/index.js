@@ -1,5 +1,6 @@
 import Landing from "../components/Landing/Landing";
-import Expertises from "../components/Expertises/Expertises";
+import Section from "../components/Section/Section";
 import Contact from "../components/Contact/Contact";
+import Footer from "../components/Footer/Footer";
 
-export { Landing, Expertises, Contact };
+export { Landing, Section, Contact, Footer };

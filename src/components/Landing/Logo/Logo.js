@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import Bounce from "react-reveal/Bounce";
+import Fade from "react-reveal/Fade";
 
 /* ----- Animations ----- */
 
@@ -35,19 +35,26 @@ const Bouncing = keyframes`
 
 const LogoText = styled.h1`
   font-family: "Pacifico", cursive;
-  font-size: 7.5rem;
+  font-size: 4.5rem;
   color: #fff;
+  margin-bottom: 2rem;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
+  /* Safari */
+-webkit-transform: rotate(-15deg);
+
+/* Firefox */
+-moz-transform: rotate(-15deg);
+
+/* IE */
+-ms-transform: rotate(-15deg);
+
+/* Opera */
+-o-transform: rotate(-15deg);
 
   &:hover {
-    -webkit-animation: ${Highlight} 1.5s ease-in-out infinite alternate,
-      ${Bouncing} 1.5s ease-in-out infinite alternate;
-    -moz-animation: ${Highlight} 1.5s ease-in-out infinite alternate,
-      ${Bouncing} 1.5s ease-in-out infinite alternate;
-    animation: ${Highlight} 1.5s ease-in-out infinite alternate,
-      ${Bouncing} 1.5s ease-in-out infinite alternate;
+    
     cursor: pointer;
   }
 
@@ -62,11 +69,12 @@ const LogoText = styled.h1`
 
 /* ----- Logo ----- */
 
-const Logo = ({ scrollToExpertises, text }) => {
+const Logo = ({ scrollToExpertises, firstName, lastName }) => {
   return (
-    <Bounce top>
-      <LogoText onClick={scrollToExpertises}>{text}</LogoText>
-    </Bounce>
+    <Fade>
+      <LogoText onClick={scrollToExpertises}>{firstName}</LogoText>
+      <LogoText onClick={scrollToExpertises}>{lastName}</LogoText>
+    </Fade>
   );
 };
 

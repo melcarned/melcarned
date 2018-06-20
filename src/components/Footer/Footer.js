@@ -5,9 +5,8 @@ import styled from "styled-components";
 
 const FooterContainer = styled.div`
   font-family: "Roboto Mono", monospace;
-  border-top: dashed 1px #fff;
-  background-color: rgb(239, 80, 85, 1);
-  color: #ffffff;
+  background-color: #fff;
+  color: #000;
   font-size: 0.8rem;
   text-align: center;
   padding: 1rem 0 1rem 0;

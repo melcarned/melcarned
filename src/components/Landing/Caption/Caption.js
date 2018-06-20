@@ -14,6 +14,9 @@ const CaptionText = styled.div`
   -moz-transition: all 0.5s;
   transition: all 0.5s;
   font-family: "Roboto Mono", monospace;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 5rem;
 
   @media (max-width: 768px) {
     display: block;
@@ -24,6 +27,8 @@ const Bracket = styled.div`
   display: inline-block;
   color: #fff;
   margin: 0 0.5rem;
+  font-size: 3rem;
+  font-weight: bold;
 
   @media (max-width: 768px) {
     display: block;
@@ -34,18 +39,14 @@ const Bracket = styled.div`
 
 const Caption = ({ text }) => {
   return (
-    <div>
-      <Bracket>{"{"}</Bracket>
       <CaptionText>
         <Fade>
-          <Typing speed={20}>
+          <Typing speed={50}>
             {text}
             <Cursor />
           </Typing>
         </Fade>
       </CaptionText>
-      <Bracket>{"}"}</Bracket>
-    </div>
   );
 };
 

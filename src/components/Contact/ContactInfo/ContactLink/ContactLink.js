@@ -23,7 +23,7 @@ const IconLink = styled.a`
   line-height: 0;
   display: inline-block;
   vertical-align: middle;
-  color: #fff;
+  color: #000;
   -webkit-transition: all 0.1s;
   -moz-transition: all 0.1s;
   transition: all 0.1s;
