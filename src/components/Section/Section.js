@@ -9,7 +9,7 @@ import ToolkitContent from "./SectionContent/ToolkitContent";
 /* ----- Styling ----- */
 
 const Wrapper = styled.div`
-  
+  height: 90vh;
 `;
 
 const ContainerStyled = styled(Container)`

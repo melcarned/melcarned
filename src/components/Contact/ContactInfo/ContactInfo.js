@@ -7,13 +7,8 @@ import ContactLink from "./ContactLink/ContactLink";
 
 /* ----- Styles ----- */
 
-const Wrapper = styled.div`
-  color: #000;
-  text-align: center;
-  padding-bottom: 4rem;
-  position: relative;
-  top: 50%;
-  transform: perspective(1px) translateY(-50%);
+const ContainerStyled = styled(Container)`
+  border-top: 1px dashed ${(props) => props.theme.borderColor};
 `;
 
 const NYCIcon = styled.img`
@@ -73,8 +68,7 @@ const HandshakeIcon = styled.img`
 
 const ContactInfo = ({ header, subtitle, link, email, icons }) => {
   return (
-    <Wrapper>
-      <Container>
+      <ContainerStyled>
           <NYCIcon src={require("../../../assets/empire_state_building.svg")} />
           <Title>{header}</Title>
           <Subtitle>{subtitle}</Subtitle>
@@ -88,8 +82,7 @@ const ContactInfo = ({ header, subtitle, link, email, icons }) => {
               <Email>{email}</Email>
             </Col>
           </Row>
-      </Container>
-    </Wrapper>
+      </ContainerStyled>
   );
 };
 

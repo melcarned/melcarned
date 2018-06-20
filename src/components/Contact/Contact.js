@@ -8,15 +8,7 @@ import ContactInfo from "./ContactInfo/ContactInfo";
 /* ----- Styles ---- */
 
 const Center = styled.div`
-  height: 100vh;
   text-align: center;
-`;
-
-const Circle = styled.div`
-  width: 75vh;
-  height: 75vh;
-  background-color: #fff;
-  border: 3px black dashed;
 `;
 
 /* ----- Contact ---- */
@@ -27,7 +19,6 @@ const Contact = () => {
   return (
       <Fade>
         <Center>
-        <Circle>
         <ContactInfo
           image={info.image}
           header={info.header}
@@ -35,7 +26,6 @@ const Contact = () => {
           email={info.email}
           icons={icons}
         />
-        </Circle>
         </Center>
       </Fade>
   );

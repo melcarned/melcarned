@@ -28,10 +28,11 @@ const Skill = styled.li`
   font-weight: bold;
   font-size: 0.8em;
   display: inline-block;
-  width: 25%;
+  width: 50%;
 
   p {
     text-align: center;
+    ${(props) => props.theme.secondaryColor};
   }
 
   @media (max-width: 576px) {
@@ -45,7 +46,7 @@ const IconStyled = styled(Icon)`
   vertical-align: middle;
   width: 100%;
   margin-bottom: 1.5rem;
-  color: "#00caca";
+  color: ${(props) => props.theme.primaryColor};
   @media (max-width: 992px) {
     margin: 2rem auto;
   }

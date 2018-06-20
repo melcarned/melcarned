@@ -35,23 +35,13 @@ const Bouncing = keyframes`
 
 const LogoText = styled.h1`
   font-family: "Pacifico", cursive;
-  font-size: 4.5rem;
-  color: #fff;
-  margin-bottom: 2rem;
+  font-size: 4rem;
+  color: ${(props) => props.theme.primaryColor};
+  margin: 2rem 0 1rem 0;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
-  /* Safari */
--webkit-transform: rotate(-15deg);
-
-/* Firefox */
--moz-transform: rotate(-15deg);
-
-/* IE */
--ms-transform: rotate(-15deg);
-
-/* Opera */
--o-transform: rotate(-15deg);
+  text-align: center;
 
   &:hover {
     
@@ -59,7 +49,7 @@ const LogoText = styled.h1`
   }
 
   @media (max-width: 768px) {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   @media (max-width: 576px) {
@@ -67,13 +57,13 @@ const LogoText = styled.h1`
   }
 `;
 
+
 /* ----- Logo ----- */
 
 const Logo = ({ scrollToExpertises, firstName, lastName }) => {
   return (
     <Fade>
       <LogoText onClick={scrollToExpertises}>{firstName}</LogoText>
-      <LogoText onClick={scrollToExpertises}>{lastName}</LogoText>
     </Fade>
   );
 };

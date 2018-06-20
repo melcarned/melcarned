@@ -31,6 +31,7 @@ const Skill = styled.li`
 
   p {
     text-align: center;
+    ${(props) => props.theme.secondaryColor};
   }
 
   @media (max-width: 576px) {

@@ -23,7 +23,7 @@ const IconLink = styled.a`
   line-height: 0;
   display: inline-block;
   vertical-align: middle;
-  color: #000;
+  color: ${(props) => props.theme.secondaryColor};
   -webkit-transition: all 0.1s;
   -moz-transition: all 0.1s;
   transition: all 0.1s;
@@ -33,7 +33,7 @@ const IconLink = styled.a`
     -moz-animation: ${Highlight} 0.1s ease-in-out infinite alternate;
     animation: ${Highlight} 0.1s ease-in-out infinite alternate;
     cursor: pointer;
-    color: #343a40;
+    color: ${(props) => props.theme.primaryColor};
   }
 
   @media (max-width: 768px) {

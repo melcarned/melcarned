@@ -12,26 +12,39 @@ import Caption from "./Caption/Caption";
 Does not include curved separator. */
 
 const Wrapper = styled.div`
-  height: 100vh;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;
 
 /* Centers Title and Caption based on screen size */
 
 const Circle = styled.div`
-  width: 75vh;
-  height: 75vh;
-  background-color: #00caca;
+  width: 45vh;
+  height: 45vh;
+  background: 
+  linear-gradient(135deg, ${(props) => props.theme.secondaryColor} 25%, transparent 25%) -50px 0,
+  linear-gradient(225deg, ${(props) => props.theme.primaryColor} 25%, transparent 25%) -50px 0,
+  linear-gradient(315deg, ${(props) => props.theme.primaryColor} 25%, transparent 25%),
+  linear-gradient(45deg, ${(props) => props.theme.primaryColor} 25%, transparent 25%);	
+  background-size: 100px 100px;
+  background-color: ${(props) => props.theme.bg};
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;
 
 const Center = styled.div`
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;
 
 /* ----- Landing ----- */
@@ -40,14 +53,9 @@ const Landing = ({ scrollToExpertises }) => {
   return (
     <Fade>
       <Wrapper>
-        <Container>
-        <Center>
-          <Circle>
-            <Logo firstName="Damiano" lastName="Melcarne" />
-            <Caption text="{ User-centered front-end development. }" />
-          </Circle>
-        </Center>
-        </Container>
+        <Circle />
+        <Logo firstName="Damiano Melcarne" lastName="Melcarne" />
+        <Caption text="{ User-centered front-end development }" />
       </Wrapper>
     </Fade>
   );

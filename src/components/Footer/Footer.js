@@ -10,6 +10,7 @@ const FooterContainer = styled.div`
   font-size: 0.8rem;
   text-align: center;
   padding: 1rem 0 1rem 0;
+  border-top: 1px dashed #aaa;
 `;
 
 /* ----- Footer -----*/

@@ -7,28 +7,14 @@ import "./cursor.css";
 
 /* ----- Styling ----- */
 
-const CaptionText = styled.div`
+const CaptionText = styled.h5`
   display: inline-block;
-  color: #fff;
+  color: ${props => props.theme.secondaryColor};
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
   font-family: "Roboto Mono", monospace;
-  font-size: 1rem;
-  font-weight: bold;
-  margin-top: 5rem;
-
-  @media (max-width: 768px) {
-    display: block;
-  }
-`;
-
-const Bracket = styled.div`
-  display: inline-block;
-  color: #fff;
-  margin: 0 0.5rem;
-  font-size: 3rem;
-  font-weight: bold;
+  text-align: center;
 
   @media (max-width: 768px) {
     display: block;
@@ -39,14 +25,14 @@ const Bracket = styled.div`
 
 const Caption = ({ text }) => {
   return (
+    <React.Fragment>
       <CaptionText>
-        <Fade>
-          <Typing speed={50}>
-            {text}
-            <Cursor />
-          </Typing>
-        </Fade>
-      </CaptionText>
+         
+           {text}
+
+</CaptionText>
+
+</React.Fragment>
   );
 };
 
