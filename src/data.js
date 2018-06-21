@@ -41,62 +41,62 @@ export default {
     display: [
       {
         name: "React",
-        icon: require(`${toolkitPath}React.png`),
+        icon: require(`${toolkitPath}React.svg`),
         link: 'https://reactjs.org/'
       },
       {
         name: "Redux",
-        icon: require(`${toolkitPath}Redux.png`),
+        icon: require(`${toolkitPath}Redux.svg`),
         link: 'https://redux.js.org/'
       },
       {
         name: "ES6",
-        icon: require(`${toolkitPath}ES6.png`),
+        icon: require(`${toolkitPath}ES6.svg`),
         link: 'http://es6-features.org/'
       },
       {
         name: "HTML5",
-        icon: require(`${toolkitPath}HTML5.png`),
+        icon: require(`${toolkitPath}HTML5.svg`),
         link: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5'
       },
       {
         name: "CSS3",
-        icon: require(`${toolkitPath}CSS3.png`),
+        icon: require(`${toolkitPath}CSS3.svg`),
         link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3'
       },
       {
         name: "UI Libraries",
-        icon: require(`${toolkitPath}Bootstrap.png`),
+        icon: require(`${toolkitPath}Bootstrap.svg`),
         link: 'https://getbootstrap.com/'
       },
       {
         name: "Firebase",
-        icon: require(`${toolkitPath}Firebase.png`),
+        icon: require(`${toolkitPath}Firebase.svg`),
         link: 'https://firebase.google.com/'
       },
       {
         name: "GitHub",
-        icon: require(`${toolkitPath}GitHub.png`),
+        icon: require(`${toolkitPath}GitHub.svg`),
         link: 'https://github.com/'
       },
       {
         name: "Trello",
-        icon: require(`${toolkitPath}Trello.png`),
+        icon: require(`${toolkitPath}Trello.svg`),
         link: 'https://trello.com/home'
       },
       {
         name: "Photoshop",
-        icon: require(`${toolkitPath}Photoshop.png`),
+        icon: require(`${toolkitPath}Photoshop.svg`),
         link: 'https://www.adobe.com/products/photoshop.html'
       },
       {
         name: "Visual Code Studio",
-        icon: require(`${toolkitPath}Visual_Code_Studio.png`),
+        icon: require(`${toolkitPath}Visual_Code_Studio.svg`),
         link: 'https://code.visualstudio.com/'
       },
       {
         name: "Paper Prototyping",
-        icon: require(`${toolkitPath}Pen_And_Paper.png`),
+        icon: require(`${toolkitPath}Pen_And_Paper.svg`),
         link: 'https://uxplanet.org/the-art-of-ux-sketching-and-paper-prototyping-5dae5a1efc7d'
       },
     ]
@@ -106,10 +106,20 @@ export default {
     header: "Portfolio",
     paragraph:
       "Coming Soon.",
-    display: []
+    display: [
+      {
+        name: "melcarned",
+      },
+      {
+        name: "Cardinali",
+      },
+      {
+        name: "Soon",
+      }
+    ]
   },
   contactContent: {
-    
+
   },
 contact: {
   info: {

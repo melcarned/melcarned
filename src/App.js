@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { SideDrawer, Landing, Section, Contact, Footer } from "./containers/index";
+import {
+  SideDrawer,
+  Landing,
+  Section,
+  Contact,
+  Footer
+} from "./containers/index";
 import styled, { ThemeProvider } from "styled-components";
 import scrollToComponent from "react-scroll-to-component";
 import data from "./data";
@@ -10,7 +16,7 @@ const theme = {
   primaryColor: "#00caca",
   secondaryColor: "#000",
   borderColor: "#ccc",
-  bg: "#fff",
+  bg: "#fff"
 };
 
 /* Base background for entire site */
@@ -35,13 +41,21 @@ class App extends Component {
   };
 
   render() {
-    const { approachContent, toolkitContent, portfolioContent, contact, footer } = data;
+    const {
+      approachContent,
+      toolkitContent,
+      portfolioContent,
+      contact,
+      footer
+    } = data;
     return (
       <ThemeProvider theme={theme}>
         <MasterWrapper>
           {/* <!--- SideDrawer ---> */}
-          <SideDrawer scrollToLanding={() => this.scrollToSection(this.landing)}
-          content={contact} />
+          <SideDrawer
+            scrollToLanding={() => this.scrollToSection(this.landing)}
+            content={contact}
+          />
 
           {/* <!--- Landing ---> */}
           <section
@@ -69,14 +83,23 @@ class App extends Component {
             <Section type="toolkit" content={toolkitContent} />
           </section>
 
-{/* <!--- Portfolio ---> */}
+          {/* <!--- Portfolio ---> */}
           <section
             ref={s => {
               this.portfolio = s;
             }}
           >
-            <Section content={portfolioContent} />
+            <Section type="portfolio" content={portfolioContent} />
           </section>
+
+          {/* <!--- Contact Form --->
+          <section
+            ref={s => {
+              this.portfolio = s;
+            }}
+          >
+            <Section type="contact" content={contactContent} />
+          </section> */}
 
           {/* <!--- Contact ---> */}
           <section

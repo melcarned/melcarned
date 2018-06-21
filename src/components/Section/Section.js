@@ -5,6 +5,7 @@ import Slide from "react-reveal/Slide";
 
 import SectionHeader from "./SectionHeader/SectionHeader";
 import ApproachContent from "./SectionContent/ApproachContent";
+import PortfolioContent from "./SectionContent/PortfolioContent";
 import ToolkitContent from "./SectionContent/ToolkitContent";
 
 /* ----- Styling ----- */
@@ -22,6 +23,19 @@ const ContainerStyled = styled(Container)`
 
 const Section = ({ type, content }) => {
   const { subHeader, header, paragraph, display } = content;
+
+  let sectionContent = <ApproachContent display={display} />
+  
+  if(type === "toolkit") {
+    sectionContent = <ToolkitContent display={display} />;
+  } else if(type === "portfolio")  {
+    sectionContent = <PortfolioContent display={display} />;
+  } 
+  
+  // else if(type === "Contact")  {
+  //   sectionContent = null;
+  // }
+
   return (
     <Wrapper>
       <ContainerStyled>
@@ -31,12 +45,7 @@ const Section = ({ type, content }) => {
           paragraph={paragraph}
         />
         <Slide right>
-        {type === "toolkit" ? (
-          
-          <ToolkitContent display={display} />
-        ) : (
-          <ApproachContent display={display} />
-        )}
+          {sectionContent}
         </Slide>
       </ContainerStyled>
     </Wrapper>

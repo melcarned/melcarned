@@ -11,7 +11,7 @@ const Wrapper = styled(Row)`
 `;
 
 const SubHeader = styled.h6`
-  color: ${(props) => props.theme.borderColor};
+  color: ${props => props.theme.borderColor};
   margin-bottom: 0.3rem;
 
   @media (max-width: 992px) {
@@ -20,7 +20,7 @@ const SubHeader = styled.h6`
 `;
 
 const Header = styled.h2`
-  color: ${(props) => props.theme.secondaryColor};
+  color: ${props => props.theme.secondaryColor};
   font-weight: bold;
   margin-bottom: 1rem;
 
@@ -44,7 +44,7 @@ const Header = styled.h2`
 `;
 
 const Paragraph = styled.p`
-  color: ${(props) => props.theme.secondaryColor};
+  color: ${props => props.theme.secondaryColor};
   line-height: 2;
   margin-bottom: 2rem;
   font-family: "Roboto Mono", monospace;

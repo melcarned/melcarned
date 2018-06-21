@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   left: 0;
   width: 4rem;
   background-color: ${props => props.theme.bgColor};
-  border-right: 1px dashed ${props => props.theme.borderColor}; 
+  border-right: 1px dashed ${props => props.theme.borderColor};
 
   ul {
     position: absolute;
@@ -20,8 +20,8 @@ const Wrapper = styled.div`
 
     @media screen and (max-height: 476px) {
       position: relative;
-    bottom: 0;
-    padding: 0;
+      bottom: 0;
+      padding: 0;
     }
   }
 
@@ -37,7 +37,7 @@ const Wrapper = styled.div`
 
 const NavLogo = styled.div`
   img {
-    display:block;
+    display: block;
     margin: 1rem auto 2rem;
 
     &:hover {
@@ -54,6 +54,7 @@ const IconLink = styled.a`
   -webkit-transition: all 0.1s;
   -moz-transition: all 0.1s;
   transition: all 0.1s;
+
   &:hover {
     cursor: pointer;
     color: ${props => props.theme.primaryColor};
@@ -86,20 +87,20 @@ const SideDrawer = ({ content, scrollToLanding }) => {
 
   return (
     <Wrapper>
-      <NavLogo onClick={scrollToLanding} >
-        <img width={32} src={require('../../assets/logo/Logo.png')} />
+      <NavLogo onClick={scrollToLanding}>
+        <img width={32} src={require("../../assets/logo/Logo.svg")} />
       </NavLogo>
       <Links>
-      {icons.map((icon, i) => (
-        <LinkItem key={i}>
-          <IconLink id={icon.target} href={icon.link}>
-            <Icon size={20} icon={icon.icon} />
-          </IconLink>
-          <UncontrolledTooltip placement="right" target={icon.target}>
-            {icon.target === "Email" ? "melcarned@gmail.com" : icon.target}
-          </UncontrolledTooltip>
-        </LinkItem>
-      ))}
+        {icons.map((icon, i) => (
+          <LinkItem key={i}>
+            <IconLink id={icon.target} href={icon.link}>
+              <Icon size={20} icon={icon.icon} />
+            </IconLink>
+            <UncontrolledTooltip placement="right" target={icon.target}>
+              {icon.target === "Email" ? "melcarned@gmail.com" : icon.target}
+            </UncontrolledTooltip>
+          </LinkItem>
+        ))}
       </Links>
     </Wrapper>
   );
