@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Typing, { Cursor } from "react-typing-animation";
 import Fade from "react-reveal/Fade";
-
-import "./cursor.css";
 
 /* ----- Styling ----- */
 

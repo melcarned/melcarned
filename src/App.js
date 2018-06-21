@@ -4,13 +4,16 @@ import styled, { ThemeProvider } from "styled-components";
 import scrollToComponent from "react-scroll-to-component";
 import data from "./data";
 
-/* Base background for entire site */
+/* App theme */
+
 const theme = {
   primaryColor: "#00caca",
   secondaryColor: "#000",
   borderColor: "#ccc",
   bg: "#fff",
 };
+
+/* Base background for entire site */
 
 const MasterWrapper = styled.div`
   background-color: #fff;
@@ -46,14 +49,12 @@ class App extends Component {
               this.landing = l;
             }}
           >
-            <Landing
-              scrollToExpertises={() => this.scrollToSection(this.expertises)}
-            />
+            <Landing />
           </section>
           {/* <!--- Approach ---> */}
           <section
             ref={s => {
-              this.expertises = s;
+              this.approach = s;
             }}
           >
             <Section type="approach" content={approachContent} />
@@ -62,7 +63,7 @@ class App extends Component {
           {/* <!--- Toolkit ---> */}
           <section
             ref={s => {
-              this.expertises = s;
+              this.toolkit = s;
             }}
           >
             <Section type="toolkit" content={toolkitContent} />
@@ -71,7 +72,7 @@ class App extends Component {
 {/* <!--- Portfolio ---> */}
           <section
             ref={s => {
-              this.expertises = s;
+              this.portfolio = s;
             }}
           >
             <Section content={portfolioContent} />

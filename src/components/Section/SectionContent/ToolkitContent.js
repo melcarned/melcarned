@@ -7,12 +7,12 @@ import Fade from "react-reveal/Fade";
 /* ----- Styling ----- */
 
 const Wrapper = styled(Row)`
-  padding: 3rem 0 3rem 0;
+  padding: 0 0 3rem 0;
 `;
 
 const Skills = styled.ul`
-  padding-left: 1rem;
   list-style: none;
+  padding: 0;
   margin: 0;
 
   @media (max-width: 992px) {
@@ -23,32 +23,35 @@ const Skills = styled.ul`
 
 const Skill = styled.li`
   line-height: 1.5;
-  padding: 0.5rem 0;
   font-weight: bold;
   font-size: 0.8em;
-  display: inline-block;
-  width: 25%;
+
 
   p {
     text-align: center;
     ${(props) => props.theme.secondaryColor};
   }
+`;
 
-  @media (max-width: 576px) {
-    display: block;
-    margin: 0 auto;
-  }
+const SkillWrapper = styled.div`
+  font-weight: bold;
+  font-size: 0.8em;
+  display: inline-block;
+  width: 25%;
 `;
 
 const ImageStyled = styled.img`
-  display: block;
+  margin: 2rem auto;
   vertical-align: middle;
   width: 48px;
-  margin: 0 auto;
   margin-bottom: 1.5rem;
   color: "#00caca";
+
+    display: block;
+
   @media (max-width: 992px) {
     margin: 2rem auto;
+    display: block;
   }
 `;
 
@@ -58,18 +61,20 @@ const ToolkitContent = ({ display }) => {
   return (
     <Wrapper>
       <Col
-        xl={{ size: 9, offset: 3 }}
-        lg={{ size: 9, offset: 3 }}
+        xl={{ size: 10, offset: 2 }}
+        lg={{ size: 10, offset: 2 }}
         md={12}
         sm={12}
         xs={12}
       >
       <Skills even>
         {display.map((e, i) => (
+          <SkillWrapper >
           <Skill even key={i}>
             <ImageStyled src={e.icon}/>
             <p>{e.name}</p>
           </Skill>
+          </SkillWrapper>
         ))}
       </Skills>
       </Col>

@@ -7,7 +7,7 @@ import Fade from "react-reveal/Fade";
 /* ----- Styling ----- */
 
 const Wrapper = styled(Row)`
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 `;
 
 const SubHeader = styled.h6`
@@ -44,12 +44,14 @@ const Header = styled.h2`
 `;
 
 const Paragraph = styled.p`
-  color: #000;
+  color: ${(props) => props.theme.secondaryColor};
   line-height: 2;
   margin-bottom: 2rem;
   font-family: "Roboto Mono", monospace;
+  padding-left: 9%;
 
   @media (max-width: 992px) {
+    padding-left: 0;
     text-align: center;
   }
 `;
@@ -59,13 +61,13 @@ const Paragraph = styled.p`
 const SectionHeader = ({ subHeader, header, paragraph }) => {
   return (
     <Wrapper>
-      <Col xl={3} lg={3} md={12} sm={12} xs={12}>
+      <Col xl={2} lg={2} md={12} sm={12} xs={12}>
         <Fade>
           <SubHeader>{subHeader}</SubHeader>
           <Header>{header}</Header>
         </Fade>
       </Col>
-      <Col xl={9} lg={9} md={12} sm={12} xs={12}>
+      <Col xl={10} lg={10} md={12} sm={12} xs={12}>
         <Slide right>
           <Paragraph>{paragraph}</Paragraph>
         </Slide>

@@ -71,7 +71,7 @@ const HandshakeIcon = styled.img`
 const ContactInfo = ({ header, subtitle, link, email, icons }) => {
   return (
       <ContainerStyled>
-          <NYCIcon src={require("../../../assets/empire_state_building.svg")} />
+          <NYCIcon src={require("../../../assets/footer/empire_state_building.svg")} />
           <Title>{header}</Title>
           <Subtitle>{subtitle}</Subtitle>
           {/* <HandshakeIcon src={require("../../../assets/handshake.svg")} /> */}

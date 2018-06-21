@@ -87,7 +87,7 @@ const SideDrawer = ({ content, scrollToLanding }) => {
   return (
     <Wrapper>
       <NavLogo onClick={scrollToLanding} >
-        <img width={32} src={require('../../assets/Logo.png')} />
+        <img width={32} src={require('../../assets/logo/Logo.png')} />
       </NavLogo>
       <Links>
       {icons.map((icon, i) => (

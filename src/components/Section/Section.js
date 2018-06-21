@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "reactstrap";
 import styled from "styled-components";
+import Slide from "react-reveal/Slide";
 
 import SectionHeader from "./SectionHeader/SectionHeader";
 import ApproachContent from "./SectionContent/ApproachContent";
@@ -29,11 +30,14 @@ const Section = ({ type, content }) => {
           header={header}
           paragraph={paragraph}
         />
+        <Slide right>
         {type === "toolkit" ? (
+          
           <ToolkitContent display={display} />
         ) : (
           <ApproachContent display={display} />
         )}
+        </Slide>
       </ContainerStyled>
     </Wrapper>
   );

@@ -45,7 +45,7 @@ const LogoText = styled.h1`
 
   &:hover {
     
-    cursor: pointer;
+    
   }
 
   @media (max-width: 768px) {

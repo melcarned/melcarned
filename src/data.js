@@ -5,9 +5,10 @@ import { linkedin, code, documentInverted, mail } from "react-icons-kit/entypo/"
 
 const toolkitPath = "./assets/toolkit_icons/";
 
+
 export default {
   approachContent: {
-    image: require("./assets/flowchart_diagram.svg"),
+    image: '',
     subHeader: "User-centered",
     header: "Approach",
     paragraph:
@@ -32,7 +33,7 @@ export default {
     ]
   },
   toolkitContent: {
-    image: require("./assets/component_diagram.svg"),
+    image: '',
     subHeader: "Front-end",
     header: "Toolkit",
     paragraph:
@@ -41,38 +42,62 @@ export default {
       {
         name: "React",
         icon: require(`${toolkitPath}React.png`),
+        link: 'https://reactjs.org/'
       },
       {
         name: "Redux",
         icon: require(`${toolkitPath}Redux.png`),
+        link: 'https://redux.js.org/'
       },
       {
         name: "ES6",
-        icon: require(`${toolkitPath}ES6.svg`),
+        icon: require(`${toolkitPath}ES6.png`),
+        link: 'http://es6-features.org/'
       },
       {
         name: "HTML5",
         icon: require(`${toolkitPath}HTML5.png`),
+        link: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5'
       },
       {
         name: "CSS3",
         icon: require(`${toolkitPath}CSS3.png`),
+        link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3'
+      },
+      {
+        name: "UI Libraries",
+        icon: require(`${toolkitPath}Bootstrap.png`),
+        link: 'https://getbootstrap.com/'
       },
       {
         name: "Firebase",
         icon: require(`${toolkitPath}Firebase.png`),
+        link: 'https://firebase.google.com/'
       },
       {
         name: "GitHub",
         icon: require(`${toolkitPath}GitHub.png`),
+        link: 'https://github.com/'
       },
       {
         name: "Trello",
         icon: require(`${toolkitPath}Trello.png`),
+        link: 'https://trello.com/home'
       },
       {
         name: "Photoshop",
         icon: require(`${toolkitPath}Photoshop.png`),
+        link: 'https://www.adobe.com/products/photoshop.html'
+      },
+      {
+        name: "Visual Code Studio",
+        icon: require(`${toolkitPath}Visual_Code_Studio.png`),
+        link: 'https://code.visualstudio.com/'
+      },
+      {
+        name: "Paper Prototyping",
+        icon: require(`${toolkitPath}Pen_And_Paper.png`),
+        link: 'https://uxplanet.org/the-art-of-ux-sketching-and-paper-prototyping-5dae5a1efc7d'
       },
     ]
   },
@@ -101,7 +126,7 @@ contact: {
     {
       icon: documentInverted,
       target: "Resume",
-      link: require("./assets/Damiano_Melcarne_Resume.pdf")
+      link: require("./assets/resume/Damiano_Melcarne_Resume.pdf")
     },
     {
       icon: code,
