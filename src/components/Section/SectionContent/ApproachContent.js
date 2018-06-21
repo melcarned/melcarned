@@ -58,8 +58,8 @@ const ApproachContent = ({ display }) => {
   return (
     <Wrapper>
       <Col
-        xl={12}
-        lg={12}
+        xl={{ size: 9, offset: 3 }}
+        lg={{ size: 9, offset: 3 }}
         md={12}
         sm={12}
         xs={12}

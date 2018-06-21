@@ -30,11 +30,16 @@ const Header = styled.h2`
     width: 1em;
     height: 2px;
     background: #000;
-    margin: 0.75em auto 0.75em;
+    margin: 0.75em 0 0.75em;
+    text-align: left;
   }
 
   @media (max-width: 992px) {
     text-align: center;
+
+    &:after {
+      margin: 0.75em auto 0.75em;
+    }
   }
 `;
 

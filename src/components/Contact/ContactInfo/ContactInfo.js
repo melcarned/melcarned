@@ -75,15 +75,15 @@ const ContactInfo = ({ header, subtitle, link, email, icons }) => {
           <Title>{header}</Title>
           <Subtitle>{subtitle}</Subtitle>
           {/* <HandshakeIcon src={require("../../../assets/handshake.svg")} /> */}
-          <Row>
+          {/* <Row>
             <Col lg={12}>
               {icons.map((e, i) => (
                 <ContactLink key={i} icon={e.icon} target={e.target} link={e.link} />
               ))}
-              {/* <Spacer> | </Spacer>
-              <Email>{email}</Email> */}
+              <Spacer> | </Spacer>
+              <Email>{email}</Email> 
             </Col>
-          </Row>
+          </Row> */}
       </ContainerStyled>
   );
 };

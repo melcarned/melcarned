@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Landing, Section, Contact, Footer } from "./containers/index";
+import { SideDrawer, Landing, Section, Contact, Footer } from "./containers/index";
 import styled, { ThemeProvider } from "styled-components";
 import scrollToComponent from "react-scroll-to-component";
 import data from "./data";
@@ -14,25 +14,32 @@ const theme = {
 
 const MasterWrapper = styled.div`
   background-color: #fff;
-  z-index: -1;
+  margin-left: 4rem;
+
+  @media (max-width: 576px) {
+    margin-left: 0px;
+  }
 `;
 
 class App extends Component {
   /* Scroll to section based on ref tag */
   scrollToSection = c => {
     scrollToComponent(c, {
-      offset: -100,
       align: "top",
-      duration: 700,
+      duration: 500,
       ease: "inCirc"
     });
   };
 
   render() {
-    const { approachContent, toolkitContent, contact, footer } = data;
+    const { approachContent, toolkitContent, portfolioContent, contact, footer } = data;
     return (
       <ThemeProvider theme={theme}>
         <MasterWrapper>
+          {/* <!--- SideDrawer ---> */}
+          <SideDrawer scrollToLanding={() => this.scrollToSection(this.landing)}
+          content={contact} />
+
           {/* <!--- Landing ---> */}
           <section
             ref={l => {
@@ -59,6 +66,15 @@ class App extends Component {
             }}
           >
             <Section type="toolkit" content={toolkitContent} />
+          </section>
+
+{/* <!--- Portfolio ---> */}
+          <section
+            ref={s => {
+              this.expertises = s;
+            }}
+          >
+            <Section content={portfolioContent} />
           </section>
 
           {/* <!--- Contact ---> */}

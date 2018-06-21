@@ -9,7 +9,7 @@ export default {
   approachContent: {
     image: require("./assets/flowchart_diagram.svg"),
     subHeader: "User-centered",
-    header: "APPROACH",
+    header: "Approach",
     paragraph:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     display: [
@@ -34,7 +34,7 @@ export default {
   toolkitContent: {
     image: require("./assets/component_diagram.svg"),
     subHeader: "Front-end",
-    header: "TOOLKIT",
+    header: "Toolkit",
     paragraph:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     display: [
@@ -76,6 +76,16 @@ export default {
       },
     ]
   },
+  portfolioContent: {
+    subHeader: "Product",
+    header: "Portfolio",
+    paragraph:
+      "Coming Soon.",
+    display: []
+  },
+  contactContent: {
+    
+  },
 contact: {
   info: {
     header: "Located in the East Village, NYC",
@@ -105,7 +115,6 @@ contact: {
     }
   ],
 },
-
   footer: {
     copyright: "melcarned.com"
   }

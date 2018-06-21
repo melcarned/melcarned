@@ -6,14 +6,12 @@ import styled from "styled-components";
 
 const FooterContainer = styled.div`
   font-family: "Roboto Mono", monospace;
-  background-color: #fff;
-  color: #000;
+  background-color: transparent;
+  color: ${(props) => props.theme.secondaryColor};
   font-size: 0.8rem;
   text-align: center;
-  padding: 1rem 0 1rem 0;
-  border-top: 1px dashed #aaa;
-  border-left: 1px dashed #aaa;
-  border-right: 1px dashed #aaa;
+  padding: 1rem 0;
+  {/*  border-top: 1px dashed ${(props) => props.theme.borderColor}; */}
 `;
 
 /* ----- Footer -----*/
