@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
+import Typist from "react-typist";
 
 /* ----- Styling ----- */
 
@@ -24,12 +25,9 @@ const Caption = ({ text }) => {
   return (
     <React.Fragment>
       <CaptionText>
-         
-           {text}
-
-</CaptionText>
-
-</React.Fragment>
+        <Typist cursor={{hideWhenDone: true}}>{text}</Typist>
+      </CaptionText>
+    </React.Fragment>
   );
 };
 

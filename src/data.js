@@ -8,7 +8,7 @@ const toolkitPath = "./assets/toolkit_icons/";
 
 export default {
   approachContent: {
-    image: '',
+    image: require("./assets/approach/Approach_Diagram.svg"),
     subHeader: "User-centered",
     header: "Approach",
     paragraph:

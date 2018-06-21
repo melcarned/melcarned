@@ -22,7 +22,7 @@ const ContainerStyled = styled(Container)`
 /* ----- Section ----- */
 
 const Section = ({ type, content }) => {
-  const { subHeader, header, paragraph, display } = content;
+  const { image, subHeader, header, paragraph, display } = content;
 
   let sectionContent = <ApproachContent display={display} />
   

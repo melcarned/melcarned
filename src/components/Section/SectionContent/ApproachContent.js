@@ -8,7 +8,7 @@ import Fade from "react-reveal/Fade";
 /* ----- Styling ----- */
 
 const Wrapper = styled(Row)`
-  padding: 3rem 0 3rem 0;
+  padding: 1rem 0 1rem 0;
 `;
 
 const Skills = styled.ul`
@@ -28,11 +28,13 @@ const Skill = styled.li`
   font-weight: bold;
   font-size: 0.8em;
   display: inline-block;
-  width: 50%;
+  width: 25%;
 
   p {
     text-align: center;
     ${(props) => props.theme.secondaryColor};
+    font-weight: bold;
+    font-size: 0.8em;
   }
 
   @media (max-width: 576px) {
@@ -47,6 +49,7 @@ const IconStyled = styled(Icon)`
   width: 100%;
   margin-bottom: 1.5rem;
   color: ${(props) => props.theme.primaryColor};
+
   @media (max-width: 992px) {
     margin: 2rem auto;
   }
@@ -58,13 +61,13 @@ const ApproachContent = ({ display }) => {
   return (
     <Wrapper>
       <Col
-        xl={{ size: 9, offset: 3 }}
-        lg={{ size: 9, offset: 3 }}
+        xl={{ size: 10, offset: 2 }}
+        lg={{ size: 10, offset: 2 }}
         md={12}
         sm={12}
         xs={12}
       >
-        <Skills even>
+        <Skills>
           {display.map((e, i) => (
             <Skill key={i}>
               <IconStyled size={48} icon={e.icon} name={e.name}/>
