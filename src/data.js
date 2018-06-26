@@ -136,7 +136,7 @@ contact: {
     {
       icon: documentInverted,
       target: "Resume",
-      link: require("./assets/resume/Damiano_Melcarne_Resume.pdf")
+      link: require("./assets/resume/Damiano_Melcarne_Resume_Summer_2018.pdf")
     },
     {
       icon: code,

@@ -38,8 +38,7 @@ const Skill = styled.li`
   }
 
   @media (max-width: 576px) {
-    display: block;
-    margin: 0 auto;
+    width: 50%;
   }
 `;
 

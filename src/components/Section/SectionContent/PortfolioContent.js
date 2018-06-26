@@ -36,7 +36,6 @@ const Skill = styled.li`
   font-weight: bold;
   font-size: 0.8em;
 
-
   p {
     text-align: center;
     ${(props) => props.theme.secondaryColor};
@@ -48,6 +47,10 @@ const SkillWrapper = styled.div`
   font-size: 0.8em;
   display: inline-block;
   width: 33%;
+
+  @media (max-width: 768px) {
+    width: 50%;
+  }
 `;
 
 // const ImageStyled = styled.img`

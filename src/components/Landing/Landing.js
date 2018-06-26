@@ -55,7 +55,7 @@ const Landing = ({ scrollToExpertises }) => {
       <Wrapper>
         <Circle />
         <Logo firstName="Damiano Melcarne" lastName="Melcarne" />
-        <Caption text="{ User-centered front-end development }" />
+        <Caption text="{ User-centered application development }" />
       </Wrapper>
     </Fade>
   );
