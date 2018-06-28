@@ -12,7 +12,7 @@ export default {
     subHeader: "User-centered",
     header: "Approach",
     paragraph:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Product development is an expensive process. A user-centered approach will help you avoid building the wrong product.",
     display: [
       {
         name: "Product Discovery",
