@@ -29,7 +29,6 @@ const Skill = styled.li`
 
   p {
     text-align: center;
-    ${(props) => props.theme.secondaryColor};
   }
 `;
 
@@ -38,6 +37,7 @@ const SkillWrapper = styled.div`
   font-size: 0.8em;
   display: inline-block;
   width: 25%;
+  border: 1px solid black;
 `;
 
 const ImageStyled = styled.img`
@@ -61,8 +61,8 @@ const ToolkitContent = ({ display }) => {
   return (
     <Wrapper>
       <Col
-        xl={{ size: 10, offset: 2 }}
-        lg={{ size: 10, offset: 2 }}
+        xl={12}
+        lg={12}
         md={12}
         sm={12}
         xs={12}

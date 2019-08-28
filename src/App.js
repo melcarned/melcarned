@@ -15,7 +15,7 @@ import data from "./data";
 /* App theme */
 
 const theme = {
-  primaryColor: "#00caca",
+  primaryColor: "#2E61CE",
   secondaryColor: "#000",
   borderColor: "#ccc",
   bg: "#fff"
@@ -25,7 +25,6 @@ const theme = {
 
 const MasterWrapper = styled.div`
   background-color: #fff;
-  margin-left: 5rem;
 
   @media (max-width: 576px) {
     margin-left: 0rem;
@@ -65,11 +64,11 @@ class App extends Component {
           <ConstructionSign>
             *** Site is under development. Enjoy the preview. ***<Icon icon={thumbsup} />
           </ConstructionSign>
-          {/* <!--- SideDrawer ---> */}
+          {/* <!--- SideDrawer --->
           <SideDrawer
             scrollToLanding={() => this.scrollToSection(this.landing)}
             content={contact}
-          />
+          /> */}
 
           {/* <!--- Landing ---> */}
           <section
