@@ -19,7 +19,7 @@ const theme = createMuiTheme({
 
 const useStyles = makeStyles({
   root: {
-    //  maxWidth: '792px',
+    maxWidth: '960px',
     padding: 0,
     border: '8px solid rgba(0, 0, 0, 0.54);',
   },

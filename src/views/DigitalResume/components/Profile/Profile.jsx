@@ -2,18 +2,32 @@ import React from 'react'
 import { Avatar, Typography, Button } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
 import SaveAlt from '@material-ui/icons/SaveAlt'
+import SaveAltTwoTone from '@material-ui/icons/SaveAltTwoTone'
 
 const useStyles = makeStyles({
   root: {
     display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+  },
+  profile: {
+    display: 'flex',
+    justifyContent: 'flex-start',
+  },
+  profilePicture: {
+    width: '100px',
+    height: '100px',
+    marginRight: '1em',
+  },
+  profileDetails: {
+    display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
   },
   leftIcon: {
     marginRight: '0.5em',
   },
   button: {
-    // width: '15em',
     margin: '1em auto',
   },
 })
@@ -23,36 +37,34 @@ function Profile() {
 
   return (
     <div className={classes.root}>
-      <Avatar size="lg">MB</Avatar>
-      <Typography gutterBottom align="center" variant="h4">
-        Damiano Melcarne
-      </Typography>
-      <Typography color="secondary" align="center" variant="body1">
-        Software Engineer
-      </Typography>
-      <Typography
-        gutterBottom
-        color="textSecondary"
-        align="center"
-        variant="subtitle1"
-      >
-        New York, NY
-      </Typography>
-      {/* <div className={classes.button}>
-        <Button color="secondary">
-          <Typography
-            gutterBottom
-            color="secondary"
-            align="center"
-            variant="subtitle1"
-          >
-            <b>
-              <SaveAlt size="large" className={classes.leftIcon} />
-              Download
-            </b>
+      <div className={classes.profile}>
+        <div>
+          <Avatar className={classes.profilePicture}>DM</Avatar>
+        </div>
+        <div>
+          <Typography gutterBottom variant="h4">
+            Damiano Melcarne
           </Typography>
-        </Button>
-      </div> */}
+          <Typography color="secondary" variant="body1">
+            <b>Software Engineer - Web UI</b>
+          </Typography>
+          <Typography gutterBottom color="textSecondary" variant="subtitle1">
+            New York, NY
+          </Typography>
+        </div>
+      </div>
+      <Button color="secondary">
+        {/* <Typography
+          gutterBottom
+          color="secondary"
+          align="center"
+          variant="subtitle1"
+        > */}
+        <b>
+          <SaveAltTwoTone fontSize="large" />
+        </b>
+        {/* </Typography> */}
+      </Button>
     </div>
   )
 }

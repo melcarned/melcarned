@@ -1,25 +1,35 @@
 import React from 'react'
 import { Avatar, Typography, Divider } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
+import {
+  ES6Icon,
+  ReactIcon,
+  CSS3Icon,
+  HTML5Icon,
+  GitIcon,
+  FirebaseIcon,
+} from '../../../../assets/toolkit_icons'
 
 const useStyles = makeStyles({
   root: {},
   specializations: {
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'spacing-between',
+    justifyContent: 'start',
     marginBottom: '2em',
   },
   specialization: {
     marginTop: '1em',
     marginBottom: '0.5em',
     display: 'flex',
-    justifyContent: 'spacing-between',
+    // justifyContent: 'space-between',
     alignItems: 'center',
-    width: '25%',
+    minWidth: '20%',
   },
   icon: {
     marginRight: '0.5em',
+    width: '25px',
+    height: '25px',
   },
 })
 
@@ -33,13 +43,15 @@ function Specialization() {
       </Typography>
       <div className={classes.specializations}>
         {SPECIALIZATION_DATA.map(specializationDetails => {
+          const { name, icon } = specializationDetails
+
           return (
             <div className={classes.specialization}>
-              <Avatar size="xs" className={classes.icon}>
-                MB
-              </Avatar>
+              <div>
+                <img className={classes.icon} src={icon} />
+              </div>
               <Typography gutterBottom variant="body1">
-                {specializationDetails.name}
+                {name}
               </Typography>
             </div>
           )
@@ -51,46 +63,39 @@ function Specialization() {
 
 export default Specialization
 
+const toolkitPath = '../../../../assets/toolkit_icons/'
+
 const SPECIALIZATION_DATA = [
   {
     name: 'ES6+',
-    // icon: require(`${toolkitPath}ES6.svg`),
-    link: 'http://es6-features.org/',
+    icon: ES6Icon,
   },
   {
     name: 'React',
-    // icon: require(`${toolkitPath}React.svg`),
-    link: 'https://reactjs.org/',
+    icon: ReactIcon,
   },
   {
     name: 'TypeScript',
-    //     icon: require(`${toolkitPath}Visual_Code_Studio.svg`),
-    link: 'https://code.visualstudio.com/',
+    icon: ReactIcon,
   },
   {
     name: 'HTML5',
-    //  icon: require(`${toolkitPath}HTML5.svg`),
-    link: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5',
+    icon: HTML5Icon,
   },
   {
     name: 'CSS3',
-    //     icon: require(`${toolkitPath}CSS3.svg`),
-    link: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3',
+    icon: CSS3Icon,
   },
   {
     name: 'Git',
-    //    icon: require(`${toolkitPath}GitHub.svg`),
-    link: 'https://github.com/',
-  },
-  {
-    name: 'Progressive Web Apps',
-    //      icon: require(`${toolkitPath}Pen_And_Paper.svg`),
-    link:
-      'https://uxplanet.org/the-art-of-ux-sketching-and-paper-prototyping-5dae5a1efc7d',
+    icon: GitIcon,
   },
   {
     name: 'Firebase',
-    //    icon: require(`${toolkitPath}Firebase.svg`),
-    link: 'https://firebase.google.com/',
+    icon: FirebaseIcon,
+  },
+  {
+    name: 'Progressive Web Apps',
+    icon: FirebaseIcon,
   },
 ]
